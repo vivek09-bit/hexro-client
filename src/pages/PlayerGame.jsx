@@ -1,7 +1,9 @@
 import { useEffect, useState } from 'react';
 import io from 'socket.io-client';
 
-const socket = io(`http://${window.location.hostname}:5001`);
+import { BACKEND_URL } from '../config';
+
+const socket = io(BACKEND_URL);
 
 export default function PlayerGame() {
     const [joined, setJoined] = useState(false);

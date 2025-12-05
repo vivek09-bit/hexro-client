@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
+import { BACKEND_URL } from '../config';
 
 export default function CreateQuiz() {
     const [title, setTitle] = useState('');
@@ -28,7 +29,7 @@ export default function CreateQuiz() {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const res = await axios.post(`http://${window.location.hostname}:5001/api/quizzes`, { title, questions });
+            const res = await axios.post(`${BACKEND_URL}/api/quizzes`, { title, questions });
             navigate(`/host/${res.data._id}`);
         } catch (err) {
             console.error(err);
