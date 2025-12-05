@@ -9,10 +9,10 @@ function App() {
     <Router>
       <div className="min-h-screen bg-gray-50">
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<PlayerGame />} />
           <Route path="/create" element={<CreateQuiz />} />
           <Route path="/host/:quizId" element={<HostGame />} />
-          <Route path="/play" element={<PlayerGame />} />
+          <Route path="/play" element={<Home />} />
         </Routes>
       </div>
     </Router>
