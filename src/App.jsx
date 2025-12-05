@@ -12,7 +12,7 @@ function App() {
           <Route path="/" element={<PlayerGame />} />
           <Route path="/create" element={<CreateQuiz />} />
           <Route path="/host/:quizId" element={<HostGame />} />
-          <Route path="/play" element={<Home />} />
+          <Route path="/play" element={<PlayerGame />} />
         </Routes>
       </div>
     </Router>
